@@ -1163,35 +1163,70 @@ button {
 .slick-next,
 .slick-prev {
   position: absolute;
-  background: #eee !important;
+  background: transparent !important;
+  border: none;
+  width: 50px;
+  height: 50px;
   font-size: 0;
-  z-index: 1;
+  z-index: 10;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-next {
+  right: -80px;
+}
+
+.slick-prev {
+  left: -80px;
 }
 
 .slick-next::after {
   position: absolute;
-  content: "";
-  background: url(../images/next_icon.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 15px;
-  height: 60px;
-  bottom: 53px;
-  left: -25px;
+  content: "→";
+  color: var(--colorBlack);
+  font-size: 24px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--colorWhite);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
 .slick-prev::after {
   position: absolute;
-  content: "";
-  background: url(../images/prev_icon.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 13px;
-  height: 50px;
-  top: 53px;
-  left: -25px;
+  content: "←";
+  color: var(--colorBlack);
+  font-size: 24px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--colorWhite);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.slick-next:hover::after,
+.slick-prev:hover::after {
+  background: var(--colorPrimary);
+  color: var(--colorWhite);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .testimonial_brand p {
