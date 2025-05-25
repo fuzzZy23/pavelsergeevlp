@@ -29,7 +29,7 @@ CSS TABLE OF CONTENTS
 /*=============================
     GLOBAL CSS START
 =============================*/
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
@@ -42,7 +42,7 @@ CSS TABLE OF CONTENTS
   --paraColor: #626262;
   --colorBlack: #010101;
   --colorWhite: #ffffff;
-  --bodyFont: "Sora", sans-serif;
+  --bodyFont: "Inter", sans-serif;
   --bodyFontPoppins: "Poppins", sans-serif;
 }
 
@@ -505,16 +505,7 @@ button {
   z-index: 3;
 }
 
-.banner_text {
-  /* position: relative;
-  width: 100%;
-  padding: 230px 0px 125px 0px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  z-index: 2; */
-}
+/* .banner_text - removed empty rule */
 
 .banner_text_top {
   width: 100%;
@@ -1054,9 +1045,7 @@ button {
   -o-transition: all linear 0.3s;
 }
 
-.services_text .service_item:hover a {
-  /* background: var(--colorPrimary); */
-}
+/* .services_text .service_item:hover a - removed empty rule */
 
 /* services end */
 
