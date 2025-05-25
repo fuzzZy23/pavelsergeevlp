@@ -1133,17 +1133,28 @@ button {
   padding-top: 75px;
 }
 
-.testimonial_text p::after {
+.testimonial_text p::before {
   position: absolute;
-  content: "";
-  background: url(../images/quot_icon.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 40px;
-  height: 35px;
+  content: "\201C";
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--colorPrimary);
   top: 0;
   left: 0;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.testimonial_text p::after {
+  position: absolute;
+  content: "\201D";
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--colorPrimary);
+  bottom: 0;
+  right: 0;
+  line-height: 1;
+  font-family: Georgia, serif;
 }
 
 .testimonial_text h4 {
