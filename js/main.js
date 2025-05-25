@@ -33,7 +33,8 @@
         petrix.stickSidebar(),
         petrix.testimonialSlider(),
         petrix.toggle(),
-        petrix.customMouse();
+        petrix.customMouse(),
+        petrix.smoothScroll();
     },
 
     /** Text animation */
@@ -825,6 +826,90 @@
             },
           },
         ],
+      });
+    },
+    /** Smooth scroll to sections */
+    smoothScroll() {
+      console.log('SmoothScroll initialized'); // Для отладки
+      
+      // Плавный скролл для ссылок в меню
+      $('.navbar-nav a[href^="#"], .right_menu a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        
+        const href = $(this).attr('href');
+        console.log('Clicked link:', href); // Для отладки
+        
+        if (href === '#home' || href === '#body') {
+          // Скролл к началу страницы
+          $('html, body').stop().animate({
+            scrollTop: 0
+          }, 200, 'swing');
+        } else {
+          const target = $(href);
+          console.log('Target found:', target.length); // Для отладки
+          
+          if (target.length) {
+            const offsetTop = target.offset().top - 80; // 80px отступ для фиксированного меню
+            console.log('Scrolling to:', offsetTop); // Для отладки
+            
+            $('html, body').stop().animate({
+              scrollTop: offsetTop
+            }, 200, 'swing');
+          }
+        }
+      });
+      
+      // Обработчик для кнопки скролла вниз в баннере
+      $('.banner_text_bottom .scroll').on('click', function(e) {
+        e.preventDefault();
+        const aboutSection = $('#about');
+        if (aboutSection.length) {
+          $('html, body').stop().animate({
+            scrollTop: aboutSection.offset().top - 80
+          }, 200, 'swing');
+        }
+      });
+      
+      // Обработчик для кнопки "Наверх" в футере
+      $('.scroll_button').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: 0
+        }, 200, 'swing');
+      });
+      
+      // Обработчик для кнопок "Записаться"
+      $('.service-book-btn').on('click', function(e) {
+        e.preventDefault();
+        const footerSection = $('#footer');
+        if (footerSection.length) {
+          $('html, body').stop().animate({
+            scrollTop: footerSection.offset().top - 80
+          }, 200, 'swing');
+        }
+      });
+      
+      // Активация пунктов меню при скролле
+      $(window).on('scroll', function() {
+        const scrollPos = $(window).scrollTop() + 100;
+        
+        $('.navbar-nav a[href^="#"]').each(function() {
+          const href = $(this).attr('href');
+          
+          if (href === '#home' || href === '#body') {
+            if (scrollPos < 200) {
+              $('.navbar-nav a').removeClass('active');
+              $(this).addClass('active');
+            }
+          } else {
+            const target = $(href);
+            
+            if (target.length && target.offset().top <= scrollPos && target.offset().top + target.outerHeight() > scrollPos) {
+              $('.navbar-nav a').removeClass('active');
+              $(this).addClass('active');
+            }
+          }
+        });
       });
     },
   };
