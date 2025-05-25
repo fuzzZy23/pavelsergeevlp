@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Используй MCP-сервер "brave-search" для поиска по проекту и информации в интернете. Используй:
+"tools": [
+    "brave_web_search",
+    "brave_local_search"
+]

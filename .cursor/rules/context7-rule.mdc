@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Используй MCP-сервер "context7" для получения актуальной информации по библиотекам и примерах их использлвания. Используй:
+"tools": [
+    "resolve-library-id",
+    "get-library-docs"
+]
