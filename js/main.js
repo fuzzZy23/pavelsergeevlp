@@ -68,7 +68,7 @@
     customMouse() {
       var mouse = { x: 0, y: 0 }; // Cursor position
       var pos = { x: 0, y: 0 }; // Cursor position
-      var ratio = 0.15; // delay follow cursor
+      var ratio = 0.4; // delay follow cursor (увеличено для быстрого отклика)
       var active = false;
       var ball = $("#ball");
 
