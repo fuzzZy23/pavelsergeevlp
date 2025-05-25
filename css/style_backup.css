@@ -1963,7 +1963,105 @@ footer {
   background: #fff;
 }
 
-/* Sidebar styles removed - not used in single page layout */
+.sidebar_services {
+  background: var(--colorWhite);
+  padding: 35px;
+}
+
+.sidebar_services h3 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.sidebar_services ul li a {
+  background: #e1eaf4;
+  width: 100%;
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--colorBlack);
+  margin-top: 15px;
+  padding: 16px 30px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.sidebar_services ul li a::after {
+  position: absolute;
+  content: "\f054";
+  font-family: "font awesome 5 pro";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--colorBlack);
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.sidebar_services ul li a:hover {
+  background: var(--colorPrimary);
+  color: var(--colorWhite);
+}
+
+.sidebar_services ul li a:hover::after {
+  color: var(--colorWhite);
+}
+
+.sidebar_contact {
+  background: var(--colorWhite);
+  padding: 35px;
+  margin-top: 35px;
+}
+
+.sidebar_contact .sidebar_contact_img {
+  height: 280px;
+  position: relative;
+}
+
+.sidebar_contact .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0006;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar_contact .overlay a {
+  color: var(--colorWhite);
+  font-weight: 700;
+  border: 1px solid #fff;
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.sidebar_contact .overlay a:hover {
+  background: var(--colorWhite);
+  color: var(--colorPrimary);
+}
 
 /*=============================
     SERVICE DETAILS END
@@ -2024,7 +2122,151 @@ footer {
   justify-content: start;
 }
 
-/* Blog sidebar styles removed - not used in single page layout */
+.sidebar_search {
+  background: var(--colorWhite);
+  padding: 35px;
+  margin-bottom: 35px;
+}
+
+.sidebar_search form {
+  position: relative;
+}
+
+.sidebar_search form input {
+  background: #e1eaf4;
+  border: none;
+  border-radius: 0;
+  padding: 18px 25px;
+  font-weight: 500;
+}
+
+.sidebar_search form input::placeholder {
+  color: #626262;
+}
+
+.sidebar_search form button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: var(--colorPrimary);
+  color: var(--colorWhite);
+  font-size: 20px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.sidebar_search form button:hover {
+  background: var(--colorBlack);
+}
+
+.blog_list .sidebar_services ul li a::after {
+  content: "\f054";
+}
+
+.sidebar_post {
+  background: var(--colorWhite);
+  padding: 35px;
+  margin-top: 35px;
+}
+
+.sidebar_post h3 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.sidebar_post ul li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #0a090910;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.sidebar_post ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+.sidebar_post ul li .img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.sidebar_post ul li .text {
+  max-width: 68%;
+}
+
+.sidebar_post ul li .text p {
+  color: var(--colorPrimary);
+  margin-bottom: 10px;
+}
+
+.sidebar_post ul li .text a {
+  display: block;
+  color: var(--colorBlack);
+  font-weight: 600;
+  font-size: 18px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.sidebar_post ul li .text a:hover {
+  color: var(--colorPrimary);
+}
+
+.sidebar_tags {
+  padding: 35px;
+  margin-top: 35px;
+  background: var(--colorWhite);
+}
+
+.sidebar_tags h3 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.sidebar_tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sidebar_tags ul li a {
+  color: #626262;
+  text-transform: capitalize;
+  background: #e1eaf4;
+  padding: 10px 20px;
+  transition: all linear 0.3s;
+}
+
+.sidebar_tags ul li a:hover {
+  background: var(--colorPrimary);
+  color: var(--colorWhite);
+}
 
 /*=============================
     BLOG LIST PAGE END
@@ -2760,4 +3002,131 @@ h5.preloader-text::after {
   BUTTON ANIMATION END
 ===============================*/
 
-/* Intro page styles removed - not used */
+/*==============================
+  INTRO PAGE START
+===============================*/
+
+.intro_page {
+  width: 100%;
+  height: 100vh;
+  clear: both;
+  float: left;
+  position: relative;
+}
+.intro_page .intro_title {
+  width: 100%;
+  float: left;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 80px 0;
+}
+.intro_page .intro_title span {
+  display: block;
+}
+.intro_page .intro_title img {
+  /* max-width: 150px; */
+  margin-bottom: 15px;
+}
+.intro_page .intro_title .image_logo {
+  display: inline-block;
+  position: relative;
+}
+.intro_page .intro_title .image_logo .version {
+  position: absolute;
+  top: -5px;
+  right: -65px;
+  color: var(--colorPrimary);
+  font-weight: 700;
+  font-size: 20px;
+}
+.intro_page .intro_bg {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro_page .demo {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.intro_page .demo .demo-item {
+  margin: 0px 0px 88px 0px;
+  width: 100%;
+  float: left;
+}
+.intro_page .demo .demo-item {
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+}
+.intro_page .demo .demo-item {
+  position: relative;
+}
+
+.intro_page .demo .demo-item {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
+.intro_page .demo .demo-item {
+  position: relative;
+  top: 0px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.intro_page .demo .demo-item:hover {
+  top: -10px;
+}
+
+.intro_page .demo .demo-item img {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  /*	border-radius: 15px;*/
+  margin-bottom: 15px;
+}
+.intro_page a {
+  color: unset;
+}
+.intro_page .demo .demo-item .mini {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.intro_page .demo .demo-item:hover .mini {
+  color: var(--colorPrimary);
+}
+.intro_page .coming h3 {
+  color: rgba(181, 181, 181, 1);
+  padding: 50px 0;
+}
+.intro_page .intro_space {
+  width: 100%;
+  float: left;
+  height: 120px;
+}
+
+/*==============================
+  INTRO PAGE END
+===============================*/
